@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true/>
+			<key>defaults</key>
+			<string>com.opa334.notrecordingprefs</string>
+			<key>key</key>
+			<string>enabled</string>
+			<key>label</key>
+			<string>Enabled</string>
+			<key>nestedEntryCount</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSLinkCell</string>
+			<key>bundle</key>
+			<string>AppList</string>
+			<key>isController</key>
+			<true/>
+			<key>label</key>
+			<string>Select Applications</string>
+			<key>ALAllowsSelection</key>
+			<true/>
+			<key>ALSettingsDefaultValue</key>
+			<false/>
+			<key>ALSettingsKeyPrefix</key>
+			<string>enabled-</string>
+			<key>ALSettingsPath</key>
+			<string>/var/mobile/Library/Preferences/com.opa334.notrecordingprefs.plist</string>
+			<key>ALSingleEnabledMode</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Respring to apply changes!</string>
+		</dict>
+		<dict>
+			<key>action</key>
+			<string>respring</string>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Respring</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>NotRecording</string>
+</dict>
+</plist>

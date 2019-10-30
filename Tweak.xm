@@ -41,7 +41,7 @@ void respring()
   NSArray* args = [[NSClassFromString(@"NSProcessInfo") processInfo] arguments];
   if(args.count != 0)
   {
-		NSString *executablePath = args[0];
+    NSString *executablePath = args[0];
     if (executablePath)
     {
       NSString *processName = [executablePath lastPathComponent];

@@ -39,10 +39,10 @@ void respring()
 %ctor
 {
   NSArray* args = [[NSClassFromString(@"NSProcessInfo") processInfo] arguments];
-	if(args.count != 0)
+  if(args.count != 0)
   {
 		NSString *executablePath = args[0];
-		if (executablePath)
+    if (executablePath)
     {
       NSString *processName = [executablePath lastPathComponent];
       BOOL isApplication = [executablePath containsString:@"/Application"];
@@ -69,9 +69,9 @@ void respring()
         if([enabled boolValue] && [enabledForApplication boolValue])
         {
           //NSLog(@"notRecording enabled");
-    			%init(Application);
+          %init(Application);
         }
       }
-		}
-	}
+    }
+  }
 }

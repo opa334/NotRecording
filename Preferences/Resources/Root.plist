@@ -7,6 +7,8 @@
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
+			<key>footerText</key>
+			<string>Apps enabled here will not be able to detect whether your screen is being recorded or mirrored. FairPlay DRM (such as e.g. Netflix videos being blacked out in the recording) is NOT bypassed by this.</string>
 		</dict>
 		<dict>
 			<key>cell</key>
@@ -24,37 +26,36 @@
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSLinkCell</string>
-			<key>bundle</key>
-			<string>AppList</string>
-			<key>isController</key>
-			<true/>
+			<string>PSLinkListCell</string>
+			<key>detail</key>
+			<string>ATLApplicationListMultiSelectionController</string>
+			<key>defaults</key>
+			<string>com.opa334.notrecordingprefs</string>
+			<key>key</key>
+			<string>enabledApplications</string>
 			<key>label</key>
-			<string>Select Applications</string>
-			<key>ALAllowsSelection</key>
+			<string>Select Apps</string>
+			<key>sections</key>
+			<array>
+				<dict>
+					<key>sectionType</key>
+					<string>Visible</string>
+				</dict>
+			</array>
+			<key>showIdentifiersAsSubtitle</key>
 			<true/>
-			<key>ALSettingsDefaultValue</key>
+			<key>defaultApplicationSwitchValue</key>
 			<false/>
-			<key>ALSettingsKeyPrefix</key>
-			<string>enabled-</string>
-			<key>ALSettingsPath</key>
-			<string>/var/mobile/Library/Preferences/com.opa334.notrecordingprefs.plist</string>
-			<key>ALSingleEnabledMode</key>
-			<false/>
+			<key>useSearchBar</key>
+			<true/>
+			<key>PostNotification</key>
+			<string>com.opa334.notrecordingprefs/ReloadPrefs</string>
 		</dict>
 		<dict>
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>footerText</key>
-			<string>Respring to apply changes!</string>
-		</dict>
-		<dict>
-			<key>action</key>
-			<string>respring</string>
-			<key>cell</key>
-			<string>PSButtonCell</string>
-			<key>label</key>
-			<string>Respring</string>
+			<string>© 2019-2022 Lars Fröder (opa334)</string>
 		</dict>
 	</array>
 	<key>title</key>

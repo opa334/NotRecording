@@ -1,6 +1,7 @@
 #import "Shared.h"
 #import <Foundation/Foundation.h>
 #import <dlfcn.h>
+#import <rootless.h>
 
 extern char*** _NSGetArgv();
 NSString* safe_getExecutablePath()

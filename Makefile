@@ -1,9 +1,12 @@
+ifeq ($(THEOS_PACKAGE_SCHEME),rootless)
+TARGET := iphone:clang:16.2:15.0
+else
+TARGET := iphone:clang:14.5:8.0
+endif
+
 INSTALL_TARGET_PROCESSES = SpringBoard
 
 include $(THEOS)/makefiles/common.mk
-
-export TARGET = iphone:clang:14.5:8.0
-export ARCHS = arm64e arm64 armv7
 
 TWEAK_NAME = NotRecording
 NotRecording_FILES = Tweak.x Shared.m

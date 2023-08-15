@@ -1,7 +1,7 @@
 Package: com.opa334.notrecording
 Name: NotRecording
 Depends: mobilesubstrate, com.opa334.altlist
-Version: 1.1
+Version: 1.1.1
 Architecture: iphoneos-arm
 Description: Spoof screen recording detection!
 Maintainer: opa334

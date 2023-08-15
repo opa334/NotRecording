@@ -2,11 +2,13 @@
 #import <Foundation/Foundation.h>
 #import <dlfcn.h>
 #import <rootless.h>
+#import <mach-o/dyld.h>
 
-extern char*** _NSGetArgv();
-NSString* safe_getExecutablePath()
+NSString *safe_getExecutablePath()
 {
-	char* executablePathC = **_NSGetArgv();
+	char executablePathC[PATH_MAX];
+	uint32_t executablePathCSize = sizeof(executablePathC);
+	_NSGetExecutablePath(&executablePathC[0], &executablePathCSize);
 	return [NSString stringWithUTF8String:executablePathC];
 }
 
